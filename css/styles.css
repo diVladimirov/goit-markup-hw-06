@@ -237,6 +237,7 @@ img {
   text-align: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border-width: 0px;
   border-color: transparent;
   transition: background-color var(--main-transition-duration)
     var(--main-transition-timing-function);
@@ -718,7 +719,8 @@ img {
   transform: translate(-50%, -50%) scale(0.1);
 }
 
-/* .modal-form {} */
+/* .modal-form {
+} */
 
 .modal-form-title {
   padding-bottom: 12px;
@@ -739,6 +741,18 @@ img {
   margin-bottom: 20px;
 }
 
+.modal-form-wrapper {
+  position: relative;
+  display: block;
+}
+
+.modal-form-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .form-field label {
   margin-bottom: 4px;
   font-size: 12px;
@@ -746,10 +760,20 @@ img {
   letter-spacing: 0.01em;
 }
 
-.form-field input {
+.form-field-input {
+  width: 100%;
   padding: 12px 12px 12px 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+}
+
+.form-field-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.form-field-input:focus + .modal-form-icon {
+  fill: var(--accent-color);
 }
 
 .form-field textarea {
@@ -761,4 +785,50 @@ img {
 
 .textarea-comments {
   resize: none;
+}
+
+.textarea-comments:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.textarea-comments::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.chekbox-wrapper {
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.modal-btn-wrapper {
+  text-align: center;
+}
+
+.modal-btn {
+  display: inline-block;
+  min-width: 200px;
+  padding: 10px 32px;
+  background-color: var(--accent-color);
+  color: var(--seconadry-accent-color);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  text-align: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border-width: 0px;
+  border-color: transparent;
+  transition: background-color var(--main-transition-duration)
+    var(--main-transition-timing-function);
+  cursor: pointer;
+}
+
+.policy-link {
+  color: var(--accent-color);
 }
