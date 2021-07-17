@@ -925,18 +925,22 @@ img {
 }
 
 .modal-form-checkbox:checked + .modal-form-checkbox-label::before {
-  background-image: url("../images/modal-window/checkbox-checked.svg");
+  background-image: url("../images/modal-window/chekbox-checked.svg");
+  background-color: var(--accent-color);
   width: 16px;
   height: 15px;
+  background-position: 50% 50%;
+  background-origin: padding-box;
+  background-repeat: no-repeat;
 }
 
 .modal-form-checkbox + .modal-form-checkbox-label::before {
-  transition: outline var(--main-transition-duration)
+  transition: border-color var(--main-transition-duration)
     var(--main-transition-timing-function);
 }
 
 .modal-form-checkbox:focus + .modal-form-checkbox-label::before {
-  outline: 2px solid var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 .modal-form-checkbox-label {
@@ -948,7 +952,7 @@ img {
 .modal-form-checkbox-label::before {
   display: block;
   content: "";
-  background-image: url("../images/modal-window/checkbox-non-chek.svg");
+  border: 2px solid var(--secondary-text-color);
   width: 16px;
   height: 15px;
   cursor: pointer;
