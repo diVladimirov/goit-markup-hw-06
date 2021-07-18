@@ -953,6 +953,7 @@ img {
   display: block;
   content: "";
   border: 2px solid var(--secondary-text-color);
+  border-radius: 2px;
   width: 16px;
   height: 15px;
   cursor: pointer;
